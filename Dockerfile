@@ -6,7 +6,7 @@ RUN pip install s3fs prefect-dask
 # base Python dependencies
 RUN pip install python-dotenv
 
-RUN mkdir /opt/prefect_workflow_repository_cache_padding
+RUN mkdir /opt/prefect_flow_run_data
 
 RUN mkdir /.prefect
 RUN chgrp -R 0 /.prefect && \
