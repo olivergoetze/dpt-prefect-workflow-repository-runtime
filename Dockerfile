@@ -9,10 +9,14 @@ RUN pip install python-dotenv
 RUN mkdir /opt/prefect_flow_run_data
 
 RUN mkdir /.prefect
-RUN chgrp -R 0 /.prefect && \
-         chmod -R g=u /.prefect
 
-RUN chgrp -R 0 /opt && \
-         chmod -R g=u /opt
 
-USER 1001
+# für OpenShift-Berechtigungen einkommentieren:
+
+#RUN chgrp -R 0 /.prefect && \
+#         chmod -R g=u /.prefect
+#
+#RUN chgrp -R 0 /opt && \
+#         chmod -R g=u /opt
+#
+#USER 1001
